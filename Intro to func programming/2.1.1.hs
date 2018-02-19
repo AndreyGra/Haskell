@@ -12,9 +12,9 @@
         |otherwise = True
 
 --Test Cases
-or_op = (  ( (True ||- False) ||- (False ||- False) ) == True )
-and_op = (  ( (True &&- False) &&- (False &&- False) ) == False )
+orOp = (True ||- False) ||- (False ||- False) == True
+andOp = (True &&- False) &&- (False &&- False) == False
 
 main = do 
-		( putStrLn $ show ( or_op ) )   --Check statement for ||- (OR) operator	
-		( putStrLn $ show ( and_op ) )  -- Check statement for &&- (AND) operator
+        print orOp  --Check statement for ||- (OR) operator	
+        print andOp -- Check statement for &&- (AND) operator
