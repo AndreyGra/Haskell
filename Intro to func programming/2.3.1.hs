@@ -11,7 +11,12 @@ nextDay day = toEnum( ( fromEnum day + 1) `mod` 7)
 previousDay::Day->Day
 previousDay day = toEnum( (fromEnum day - 1) `mod` 7)
 
+mypair::(a->b,a->y) -> a  -> (b,y)
+mypair (f,g) x = (f x, g x)
+
+workday = uncurry(||) . mypair((Mon <=),(<= Fri) )
+
 main = do 
         print (show (nextDay Mon))  
         print (show (previousDay Mon))
-
+        print (show (workday Mon)) 
