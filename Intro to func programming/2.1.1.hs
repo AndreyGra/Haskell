@@ -1,4 +1,4 @@
---Custom OR operator 2.11
+--Custom OR operator 3.11
 (||-)::Bool->Bool->Bool
 (||-) True _ = True
 (||-) _ True = True
